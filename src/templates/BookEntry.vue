@@ -84,7 +84,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .book {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;

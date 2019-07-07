@@ -2,9 +2,9 @@
   <Layout>
     <div class="books">
       <div class="book" v-for="book in $page.allBookEntry.edges" :key="book.node.id">
-        <h2>
+        <h4>
           <g-link :to="`showcase/${book.node.id}`">{{ book.node.title }}</g-link>
-        </h2>
+        </h4>
 
         <div class="content">
           <div class="img-wrapper">
@@ -57,20 +57,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .books {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 .book {
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26);
   padding: 0 15px 20px;
-  margin: 20px 5px;
-  width: 300px;
+  background: white;
 }
+
+.book a {
+  color: teal;
+  text-decoration: none;
+}
+
 .img-wrapper {
   width: 100%;
   text-align: center;
