@@ -62,6 +62,7 @@ export default {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
 }
 .book {
   border-radius: 5px;
@@ -73,6 +74,10 @@ export default {
 .book a {
   color: teal;
   text-decoration: none;
+
+  &:hover {
+    color: darken(teal, 10%);
+  }
 }
 
 .img-wrapper {
